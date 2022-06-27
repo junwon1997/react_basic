@@ -1,23 +1,34 @@
-import React, { Component } from 'react';
-import Habit from './habit';
+import React, { Component } from "react";
+import Habit from "./habit";
 
 class Habits extends Component {
-    state = {
-        habits: [
-            {name: 'Reading', count: 0},
-            {name: 'Running', count: 0},
-            {name: 'Coding', count: 0},
-        ],
-    };
-    render() {
-        return (
-        <ul>
-            {this.state.habits.map(habit =>(
-                <Habit habit={habit}/>
-            ))}   
-        </ul>
-        );
-    }
+  handleIncrement = (habit) => {
+    this.props.onIncrement(habit);
+  };
+
+  handleDecrement = (habit) => {
+    this.props.onDecrement(habit);
+  };
+
+  handleDelete = (habit) => {
+    this.props.onDelete(habit);
+  };
+
+  render() {
+    return (
+      <ul>
+        {this.props.habits.map((habit) => (
+          <Habit
+            key={habit.id}
+            habit={habit}
+            onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
+            onDelete={this.handleDelete}
+          />
+        ))}
+      </ul>
+    );
+  }
 }
 
 export default Habits;

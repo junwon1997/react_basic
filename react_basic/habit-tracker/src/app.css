@@ -10,7 +10,7 @@ button {
   list-style: none;
 }
 
-.habit-count{
+.habit-count {
   display: inline-block;
   text-align: center;
   font-size: 2rem;
@@ -31,11 +31,11 @@ button {
 }
 
 .habit-button:hover {
-  opacity: 0.0;
+  opacity: 0;
 }
 
 .habit-increase,
-.habit-decrease{
+.habit-decrease {
   color: goldenrod;
 }
 
@@ -43,4 +43,25 @@ button {
   font-size: 2rem;
   vertical-align: baseline;
   color: darkred;
+}
+
+.navbar {
+  background-color: bisque;
+}
+
+.navbarBox {
+  font-size: 1.9rem;
+  padding: 1em 0 1em 1.8em;
+}
+
+.navbarTitle,
+.navbarCount {
+  margin: 0 0.25em 0 0.25em;
+}
+
+.navbarCount {
+  background-color: green;
+  border-radius: 50%;
+  padding: 0 0.4em 0 0.4em;
+  color: white;
 }
